@@ -1,0 +1,13 @@
+<div class="form-group">
+    <label for="{{formName+index}}" class="col-sm-4 control-label" ng-class="{'fb-required':required}">{{label}}</label>
+    <div class="col-sm-8">
+      <table class="table table-striped table-bordered">
+           <tr ng-repeat="col in options track by $index" >
+               <td ng-repeat="row in col track by $index" ng-style="{'background-color':row.cellbackground,'color':row.celltextcolor}">
+             {{row.celldata}} {{$index}}
+           </td>
+           </tr>
+      </table>
+        <p class='help-block'>{{description}}</p>
+    </div>
+</div>
